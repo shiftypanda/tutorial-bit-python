@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fc36a2f-eead-4b64-bd07-6e3fe3713bf8" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/week-1/while_exercises.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/week-1/scratchpad-week-1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/week-1/scratchpad-week-1.ipynb" afterDir="false" />
     </list>
@@ -17,11 +18,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="scratchpad-week-1.ipynb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scratchpad-week-1.ipynb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/week-1/scratchpad-week-1.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <selected id="38" />
+              <selected id="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="while_exercises.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/week-1/while_exercises.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -32,6 +42,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -44,14 +55,16 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.cmdline" />
+        <option value="$PROJECT_DIR$/week-1/week1-ide.py" />
         <option value="$PROJECT_DIR$/week-1/scratchpad-week-1.ipynb" />
+        <option value="$PROJECT_DIR$/week-1/while_exercises.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="508" />
-    <option name="y" value="41" />
-    <option name="width" value="762" />
+    <option name="x" value="340" />
+    <option name="y" value="23" />
+    <option name="width" value="940" />
     <option name="height" value="739" />
   </component>
   <component name="ProjectView">
@@ -104,7 +117,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jupyter Notebook.mit-python-intro">
+  <component name="RunManager" selected="Python.while_exercises">
     <configuration name="mit-python-intro" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="mit-python-intro" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,12 +152,51 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="week1-ide" type="PythonConfigurationType" factoryName="Python">
+      <module name="mit-python-intro" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week-1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week-1/week1-ide.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="while_exercises" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="mit-python-intro" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week-1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week-1/while_exercises.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
+      <item itemvalue="Python.week1-ide" />
       <item itemvalue="Jupyter Notebook.mit-python-intro" />
       <item itemvalue="Python.scratch" />
+      <item itemvalue="Python.while_exercises" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.while_exercises" />
         <item itemvalue="Python.scratch" />
       </list>
     </recent_temporary>
@@ -172,17 +224,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="508" y="41" width="762" height="739" extended-state="0" />
+    <frame x="340" y="23" width="940" height="739" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2758275" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3287879" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27529925" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32866043" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32866043" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3287879" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32866043" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3287879" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32866043" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32866043" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32866043" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24932003" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3287879" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32866043" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39719626" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32910246" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3287879" />
@@ -197,10 +251,29 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32866043" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3287879" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.3287879" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3287879" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2758275" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.24932003" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3287879" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3287879" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3287879" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32866043" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3287879" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -230,6 +303,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -310,10 +388,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/week-1/week1-ide.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.1/python_stubs/179801060/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16731">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/week-1/scratchpad-week-1.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="38" />
+          <selected id="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week-1/while_exercises.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
         </state>
       </provider>
     </entry>
