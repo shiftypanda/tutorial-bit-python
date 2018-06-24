@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fc36a2f-eead-4b64-bd07-6e3fe3713bf8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/week-1/while_exercises.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week-1/scratchpad-week-1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/week-1/scratchpad-week-1.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week-1/for_exercises.py" beforeDir="false" afterPath="$PROJECT_DIR$/week-1/for_exercises.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="while_exercises.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/week-1/while_exercises.py">
+      <file leaf-file-name="for_exercises.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/week-1/for_exercises.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+            <state relative-caret-position="302">
+              <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -58,6 +56,7 @@
         <option value="$PROJECT_DIR$/week-1/week1-ide.py" />
         <option value="$PROJECT_DIR$/week-1/scratchpad-week-1.ipynb" />
         <option value="$PROJECT_DIR$/week-1/while_exercises.py" />
+        <option value="$PROJECT_DIR$/week-1/for_exercises.py" />
       </list>
     </option>
   </component>
@@ -117,7 +116,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.while_exercises">
+  <component name="RunManager" selected="Python.for_exercises">
     <configuration name="mit-python-intro" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="mit-python-intro" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -133,6 +132,24 @@
       <option name="additionalOptions" value="" />
       <option name="ipnbHost" value="127.0.0.1" />
       <option name="ipnbPort" value="8888" />
+    </configuration>
+    <configuration name="for_exercises" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="mit-python-intro" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week-1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week-1/for_exercises.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mit-python-intro" />
@@ -193,9 +210,11 @@
       <item itemvalue="Jupyter Notebook.mit-python-intro" />
       <item itemvalue="Python.scratch" />
       <item itemvalue="Python.while_exercises" />
+      <item itemvalue="Python.for_exercises" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.for_exercises" />
         <item itemvalue="Python.while_exercises" />
         <item itemvalue="Python.scratch" />
       </list>
@@ -411,8 +430,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/week-1/while_exercises.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+        <state relative-caret-position="279">
+          <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week-1/for_exercises.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
         </state>
       </provider>
     </entry>
