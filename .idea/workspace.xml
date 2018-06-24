@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fc36a2f-eead-4b64-bd07-6e3fe3713bf8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/week-1/for_exercises.py" beforeDir="false" afterPath="$PROJECT_DIR$/week-1/for_exercises.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week-1/guess_and_check.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week-1/scratchpad-week-1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/week-1/scratchpad-week-1.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,16 +22,25 @@
         <entry file="file://$PROJECT_DIR$/week-1/scratchpad-week-1.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <selected id="67" />
+              <selected id="70" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="for_exercises.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="guess_and_check.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/week-1/guess_and_check.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="for_exercises.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/week-1/for_exercises.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+            <state relative-caret-position="249">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -54,9 +65,10 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.cmdline" />
         <option value="$PROJECT_DIR$/week-1/week1-ide.py" />
-        <option value="$PROJECT_DIR$/week-1/scratchpad-week-1.ipynb" />
         <option value="$PROJECT_DIR$/week-1/while_exercises.py" />
         <option value="$PROJECT_DIR$/week-1/for_exercises.py" />
+        <option value="$PROJECT_DIR$/week-1/scratchpad-week-1.ipynb" />
+        <option value="$PROJECT_DIR$/week-1/guess_and_check.py" />
       </list>
     </option>
   </component>
@@ -116,7 +128,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.for_exercises">
+  <component name="RunManager" selected="Python.guess_and_check">
     <configuration name="mit-python-intro" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="mit-python-intro" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -146,6 +158,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week-1/for_exercises.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="guess_and_check" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="mit-python-intro" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week-1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week-1/guess_and_check.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -211,9 +241,11 @@
       <item itemvalue="Python.scratch" />
       <item itemvalue="Python.while_exercises" />
       <item itemvalue="Python.for_exercises" />
+      <item itemvalue="Python.guess_and_check" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.guess_and_check" />
         <item itemvalue="Python.for_exercises" />
         <item itemvalue="Python.while_exercises" />
         <item itemvalue="Python.scratch" />
@@ -421,13 +453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week-1/scratchpad-week-1.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/week-1/while_exercises.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
@@ -435,10 +460,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/week-1/notebook.tex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="84" column="14" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/week-1/for_exercises.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+        <state relative-caret-position="249">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week-1/scratchpad-week-1.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week-1/guess_and_check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
         </state>
       </provider>
     </entry>
