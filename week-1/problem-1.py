@@ -59,6 +59,14 @@ for character in s:
 print("Number of vowels: " + str(total_vowels))
 
 
+# amended version
+s = "azcbobobegghakl"
+total_vowels = 0
+for character in s:
+    if character in "aeiou":
+        total_vowels += 1
+print("Number of vowels: " + str(total_vowels))
+
 class TestProblemOne(TestCase):
 
 
