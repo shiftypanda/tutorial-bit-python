@@ -11,27 +11,29 @@ Note: This problem may be challenging. We encourage you to work smart.
 If you've spent more than a few hours on this problem, we suggest that you move on to a different part of the course.
 If you have time, come back to this problem after you've had a break and cleared your head."""
 
-# starting string
-s = 'azcbobobegghakl'
-
 # initialise variable to be returned for final answer
-longest_substring = ""
-start_index = 0
 # 1. Need to iterate through characters in string
-for char in s:
-    start_index += 1
-    new_substring = s[start_index:]
 # test required to check if going in forward way through alphabet
-    if char in "abcdefghijklmnopqrstuvwxyz":
-        longest_substring.append(char)
-
 # 2. when no longer going in alphabetical order - reset the index marker
-
+# compare order of strings
 # 3. if new strong longer than current string then overwrite it
-# 4. store len(temporary string) as longset_string marker
+# 4. store len(temporary string) as longest_string marker
 # 5. search from new index marker to find next longest substring,
 # 6. print final output
 
+# starting string
+s = 'azcbobobegghakl'
 
+sub = longest = s[0]
+# two strings equal to first character
 
-print("Longest substring in alphabetical order is: " + str(len(longest_substring)))
+for char in range(len(s)-1):
+    if s[char+1] >= s[char]:  # compares next character to current character
+        sub += s[char+1]
+    else:
+        sub = s[char+1]  # restarts substring with next character
+    if len(sub) > len(longest):  # compares longest string to current string
+        longest = sub
+
+print('Longest substring in alphabetical order is: ' + str(longest))
+
