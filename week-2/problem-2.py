@@ -25,15 +25,16 @@ def CreditCardBalanceClear(balance, annualInterestRate):
     :param annualInterestRate: float of annualised interest rate
     :return: lowest monthly payment to pay off in one year, must be multiple of 10 same for each month
     """
-    # iterate over 12 months across a year
 
-    # base case if min_payment is enough to clear balance return min_payment amount
+
+    # initialise min_payment
     balance_with_interest = balance
-    min_payment = 10
-    while min_payment <= balance_with_interest:
-        # re-set temp balanace marker each loop
+    min_payment = 0
+    while min_payment < (balance_with_interest + 10):
+        # re-set temp balance marker each loop
         balance_with_interest = balance
 
+        # iterate over 12 months across a year
         for months in range(1, 12+1):
             # calculate interest payment
             interest = balance_with_interest * (annualInterestRate/12)
@@ -43,7 +44,10 @@ def CreditCardBalanceClear(balance, annualInterestRate):
             # take payment away from balance
             balance_with_interest -= min_payment
         min_payment += 10
-    print("found min value: " + str(min_payment))
+
+    # add final extra payment to ensure fully paid off
+    min_payment += 10
+    print("Lowest Payment: " + str(min_payment))
     return min_payment
 
 # define tests
@@ -79,5 +83,20 @@ class TestCreditCardBalanceClear(TestCase):
 
         response = CreditCardBalanceClear(balance, annualInterestRate)
 
-        self.assertEqual(1320, response)
+        self.assertEqual(1380, response)
 
+    def test_balance_4872_interest_0_15(self):
+        balance = 4872
+        annualInterestRate = 0.15
+
+        response = CreditCardBalanceClear(balance, annualInterestRate)
+
+        self.assertEqual(440, response)
+
+    def test_balance_448_interest_0_18(self):
+        balance = 448
+        annualInterestRate = 0.18
+
+        response = CreditCardBalanceClear(balance, annualInterestRate)
+
+        self.assertEqual(50, response)
