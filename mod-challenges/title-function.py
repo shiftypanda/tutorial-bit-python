@@ -35,3 +35,15 @@ class TestTitleFunction(TestCase):
         response = convert_string_to_title(s)
         expected_response = s.title()
         self.assertEqual(expected_response, response)
+
+    def test_converts_accents(self):
+        s = "él ñiño"
+        response = convert_string_to_title(s)
+        expected_response = s.title()
+        self.assertEqual(expected_response, response)
+
+    def test_ignores_symbols(self):
+        s = "@#%@$%.foo ?BAR ,bAZ"
+        response = convert_string_to_title(s)
+        expected_response = s.title()
+        self.assertEqual(expected_response, response)

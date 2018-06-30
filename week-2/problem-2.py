@@ -11,7 +11,10 @@
 # The program should print out one line: the lowest monthly payment that will pay off all debt in under 1 year, for example:
 #
 # Lowest Payment: 180
-# Assume that the interest is compounded monthly according to the balance at the end of the month (after the payment for that month is made). The monthly payment must be a multiple of $10 and is the same for all months. Notice that it is possible for the balance to become negative using this payment scheme, which is okay. A summary of the required math is found below:
+# Assume that the interest is compounded monthly according to the balance at the end of the month (after the payment for that month is made).
+# The monthly payment must be a multiple of $10 and is the same for all months.
+# Notice that it is possible for the balance to become negative using this payment scheme,
+# which is okay. A summary of the required math is found below:
 #
 # Monthly interest rate = (Annual interest rate) / 12.0
 # Monthly unpaid balance = (Previous balance) - (Minimum fixed monthly payment)
@@ -30,7 +33,7 @@ def CreditCardBalanceClear(balance, annualInterestRate):
     # initialise min_payment
     balance_with_interest = balance
     min_payment = 0
-    while min_payment < (balance_with_interest + 10):
+    while min_payment <= (balance_with_interest + balance_with_interest * annualInterestRate):
         # re-set temp balance marker each loop
         balance_with_interest = balance
 
