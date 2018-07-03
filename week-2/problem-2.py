@@ -75,7 +75,7 @@ def CreditCardBalanceClear(balance, annualInterestRate):
     print(str(lowest_payment))
     return lowest_payment
 
-CreditCardBalanceClear(balance, annualInterestRate)
+# CreditCardBalanceClear(balance, annualInterestRate)
 
 
 # define tests
@@ -122,7 +122,7 @@ class TestCreditCardBalanceClear(TestCase):
 
         response = CreditCardBalanceClear(balance, annualInterestRate)
 
-        self.assertEqual(1380, response)
+        self.assertEqual(1440, response)
 
 
     def test_balance_4872_interest_0_15(self):
