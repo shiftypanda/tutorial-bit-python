@@ -59,11 +59,12 @@ def CreditCardBalanceClear(balance, annualInterestRate):
         return round(temp_balance, 2)
 
     lowest_payment = 0  # initialise lowest_payment amount
-    while lowest_payment <= balance:
+    while lowest_payment <= balance:  # check against starting balance to ensure not abvoe it
         if final_balance <= 0:
             break
         elif final_balance > 0:
             lowest_payment += 10
+            # call helper function to iterate through one years payment and return final balance
             final_balance = one_years_payment_simplified(
                 balance=starting_balance,
                 annualInterestRate=annualInterestRate,
@@ -75,6 +76,8 @@ def CreditCardBalanceClear(balance, annualInterestRate):
     return lowest_payment
 
 CreditCardBalanceClear(balance, annualInterestRate)
+
+
 # define tests
 class TestCreditCardBalanceClear(TestCase):
 
