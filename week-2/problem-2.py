@@ -29,43 +29,8 @@ def CreditCardBalanceClear(balance, annualInterestRate):
     :return: lowest monthly payment to pay off in one year, must be multiple of 10 same for each month
     """
 
-
     starting_balance = balance
     final_balance = balance
-
-
-    def one_months_payment(balance, annualInterestRate, monthly_payment):
-        """
-        :param balance: total balance
-        :param annualInterestRate: annual interest rate
-        :param monthly_payment: int minimum monthly payment
-        :return:balance after one month, with payment taken first and interest added
-        """
-        monthly_interest_rate = annualInterestRate / 12.0  # calculate monthly interest rate
-
-        monthly_unpaid_balance = balance - monthly_payment
-
-        updated_balance = monthly_unpaid_balance + (monthly_interest_rate * monthly_unpaid_balance)
-
-        return round(updated_balance, 2)
-
-    def one_years_payment(balance, annualInterestRate, monthly_payment):
-        """
-        :param balance: starting total balance
-        :param annualInterestRate: annual interst rate decimainl
-        :param monthly_payment: monthly payment amount
-        :return: final updated balance at end of a year
-        """
-        floating_balance = balance
-
-        for month in range(12):
-            floating_balance = balance - one_months_payment(
-                balance=floating_balance,
-                annualInterestRate=annualInterestRate,
-                monthly_payment=monthly_payment
-            )
-
-        return round(floating_balance, 2)
 
     def one_years_payment_simplified(balance, annualInterestRate, monthly_payment):
         """
@@ -88,7 +53,7 @@ def CreditCardBalanceClear(balance, annualInterestRate):
 
     lowest_payment = 0  # initialise lowest_payment amount
     while lowest_payment <= final_balance:
-        if final_balance <= 0:
+        if final_balance < 0:
             continue
         elif final_balance >= 0:
             lowest_payment += 10
@@ -97,10 +62,6 @@ def CreditCardBalanceClear(balance, annualInterestRate):
                 annualInterestRate=annualInterestRate,
                 monthly_payment=lowest_payment
             )
-
-
-
-
 
     print("Lowest Payment:", end=" ")
     print(str(lowest_payment))
