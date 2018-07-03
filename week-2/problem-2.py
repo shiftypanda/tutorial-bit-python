@@ -54,7 +54,7 @@ def CreditCardBalanceClear(balance, annualInterestRate):
     lowest_payment = 0  # initialise lowest_payment amount
     while lowest_payment <= final_balance:
         if final_balance < 0:
-            continue
+            break
         elif final_balance >= 0:
             lowest_payment += 10
             final_balance = one_years_payment_simplified(
