@@ -39,23 +39,24 @@ def CreditCardBalanceClear(balance, annualInterestRate):
         :param monthly_payment: monthly payment amount
         :return: final balance after one years payment
         """
-
+        temp_balance = balance
         for month in range(1, 12+1):
+
             # take payment away from balance
-            balance -= monthly_payment
+            temp_balance -= monthly_payment
 
             # calculate interest payment
-            interest = balance * (annualInterestRate / 12)
+            interest = temp_balance * (annualInterestRate / 12)
 
             # add interest to balance
-            balance += interest
-        return balance
+            temp_balance = temp_balance + interest
+        return temp_balance
 
     lowest_payment = 0  # initialise lowest_payment amount
     while lowest_payment <= final_balance:
-        if final_balance < 0:
+        if final_balance <= 0:
             break
-        elif final_balance >= 0:
+        elif final_balance > 0:
             lowest_payment += 10
             final_balance = one_years_payment_simplified(
                 balance=starting_balance,
