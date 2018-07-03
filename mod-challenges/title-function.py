@@ -2,7 +2,7 @@
 # Idea created on beginner programmers discord
 # by MajorDiscord and Fisk, Unit tests by Shiftypanda
 from unittest import TestCase
-
+import re
 
 s = 'we lOve to hAVe really amazingly Neat titles'
 
@@ -12,7 +12,11 @@ def convert_string_to_title(s):
     :return: capitlised string with first letter in uppercase, rest letters in lower case.
     """
 
-
+    return re.sub(r"[A-Za-z]+('[A-Za-z]+)?",
+                  lambda mo:
+                    mo.group(0)[0].upper() +
+                    mo.group(0)[1:].lower(),
+                    s)
 
 # Define tests
 
