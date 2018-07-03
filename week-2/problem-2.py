@@ -30,28 +30,81 @@ def CreditCardBalanceClear(balance, annualInterestRate):
     """
 
 
-    # initialise min_payment
-    balance_with_interest = balance
-    min_payment = 0
-    while min_payment <= (balance_with_interest + balance_with_interest * annualInterestRate):
-        # re-set temp balance marker each loop
-        balance_with_interest = balance
+    starting_balance = balance
+    final_balance = balance
 
-        # iterate over 12 months across a year
-        for months in range(1, 12+1):
-            # calculate interest payment
-            interest = balance_with_interest * (annualInterestRate/12)
-            # add interest to balance
-            balance_with_interest += interest
 
+    def one_months_payment(balance, annualInterestRate, monthly_payment):
+        """
+        :param balance: total balance
+        :param annualInterestRate: annual interest rate
+        :param monthly_payment: int minimum monthly payment
+        :return:balance after one month, with payment taken first and interest added
+        """
+        monthly_interest_rate = annualInterestRate / 12.0  # calculate monthly interest rate
+
+        monthly_unpaid_balance = balance - monthly_payment
+
+        updated_balance = monthly_unpaid_balance + (monthly_interest_rate * monthly_unpaid_balance)
+
+        return round(updated_balance, 2)
+
+    def one_years_payment(balance, annualInterestRate, monthly_payment):
+        """
+        :param balance: starting total balance
+        :param annualInterestRate: annual interst rate decimainl
+        :param monthly_payment: monthly payment amount
+        :return: final updated balance at end of a year
+        """
+        floating_balance = balance
+
+        for month in range(12):
+            floating_balance = balance - one_months_payment(
+                balance=floating_balance,
+                annualInterestRate=annualInterestRate,
+                monthly_payment=monthly_payment
+            )
+
+        return round(floating_balance, 2)
+
+    def one_years_payment_simplified(balance, annualInterestRate, monthly_payment):
+        """
+        :param balance: starting balance
+        :param annualInterestRate: dec annual interst
+        :param monthly_payment: monthly payment amount
+        :return: final balance after one years payment
+        """
+
+        for month in range(1, 12+1):
             # take payment away from balance
-            balance_with_interest -= min_payment
-        min_payment += 10
+            balance -= monthly_payment
 
-    # add final extra payment to ensure fully paid off
-    min_payment += 10
-    print("Lowest Payment: " + str(min_payment))
-    return min_payment
+            # calculate interest payment
+            interest = balance * (annualInterestRate / 12)
+
+            # add interest to balance
+            balance += interest
+        return balance
+
+    lowest_payment = 0  # initialise lowest_payment amount
+    while lowest_payment <= final_balance:
+        if final_balance <= 0:
+            continue
+        elif final_balance >= 0:
+            lowest_payment += 10
+            final_balance = one_years_payment_simplified(
+                balance=starting_balance,
+                annualInterestRate=annualInterestRate,
+                monthly_payment=lowest_payment
+            )
+
+
+
+
+
+    print("Lowest Payment:", end=" ")
+    print(str(lowest_payment))
+    return lowest_payment
 
 # define tests
 class TestCreditCardBalanceClear(TestCase):
