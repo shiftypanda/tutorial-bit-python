@@ -1,4 +1,6 @@
-# Now write a program that calculates the minimum fixed monthly payment needed in order pay off a credit card balance within 12 months. By a fixed monthly payment, we mean a single number which does not change each month, but instead is a constant amount that will be paid each month.
+# Now write a program that calculates the minimum fixed monthly payment needed in order pay off a credit card
+# balance within 12 months. By a fixed monthly payment, we mean a single number which does not change each month,
+# but instead is a constant amount that will be paid each month.
 #
 # In this problem, we will not be dealing with a minimum monthly payment rate.
 #
@@ -8,10 +10,12 @@
 #
 # annualInterestRate - annual interest rate as a decimal
 #
-# The program should print out one line: the lowest monthly payment that will pay off all debt in under 1 year, for example:
+# The program should print out one line:
+# the lowest monthly payment that will pay off all debt in under 1 year, for example:
 #
 # Lowest Payment: 180
-# Assume that the interest is compounded monthly according to the balance at the end of the month (after the payment for that month is made).
+# Assume that the interest is compounded monthly according to the balance at the end of the month
+# (after the payment for that month is made).
 # The monthly payment must be a multiple of $10 and is the same for all months.
 # Notice that it is possible for the balance to become negative using this payment scheme,
 # which is okay. A summary of the required math is found below:
@@ -21,6 +25,8 @@
 # Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
 
 from unittest import TestCase
+
+
 
 def CreditCardBalanceClear(balance, annualInterestRate):
     """
@@ -49,11 +55,11 @@ def CreditCardBalanceClear(balance, annualInterestRate):
             interest = temp_balance * (annualInterestRate / 12)
 
             # add interest to balance
-            temp_balance = temp_balance + interest
-        return temp_balance
+            temp_balance = temp_balance + round(interest, 2)
+        return round(temp_balance, 2)
 
     lowest_payment = 0  # initialise lowest_payment amount
-    while lowest_payment <= final_balance:
+    while lowest_payment <= balance:
         if final_balance <= 0:
             break
         elif final_balance > 0:
@@ -68,8 +74,17 @@ def CreditCardBalanceClear(balance, annualInterestRate):
     print(str(lowest_payment))
     return lowest_payment
 
+CreditCardBalanceClear(balance, annualInterestRate)
 # define tests
 class TestCreditCardBalanceClear(TestCase):
+
+    def test_balance_448_interest_0_18(self):
+        balance = 448
+        annualInterestRate = 0.18
+
+        response = CreditCardBalanceClear(balance, annualInterestRate)
+
+        self.assertEqual(50, response)
 
     def test_balance_3329_interest_0_2(self):
         balance = 3329
@@ -79,6 +94,7 @@ class TestCreditCardBalanceClear(TestCase):
 
         self.assertEqual(310, response)
 
+
     def test_balance_4773_interest_0_2(self):
         balance = 4773
         annualInterestRate = 0.2
@@ -86,6 +102,7 @@ class TestCreditCardBalanceClear(TestCase):
         response = CreditCardBalanceClear(balance, annualInterestRate)
 
         self.assertEqual(440, response)
+
 
     def test_balance_3926_interest_0_2(self):
         balance = 3926
@@ -95,6 +112,7 @@ class TestCreditCardBalanceClear(TestCase):
 
         self.assertEqual(360, response)
 
+
     def test_balance_15780_interest_0_2(self):
         balance = 15780
         annualInterestRate = 0.2
@@ -102,6 +120,7 @@ class TestCreditCardBalanceClear(TestCase):
         response = CreditCardBalanceClear(balance, annualInterestRate)
 
         self.assertEqual(1380, response)
+
 
     def test_balance_4872_interest_0_15(self):
         balance = 4872
@@ -111,10 +130,5 @@ class TestCreditCardBalanceClear(TestCase):
 
         self.assertEqual(440, response)
 
-    def test_balance_448_interest_0_18(self):
-        balance = 448
-        annualInterestRate = 0.18
 
-        response = CreditCardBalanceClear(balance, annualInterestRate)
 
-        self.assertEqual(50, response)
