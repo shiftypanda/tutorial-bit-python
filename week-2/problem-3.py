@@ -26,15 +26,84 @@ balance = 100
 annualInterestRate = 0.12
 
 # bisection search
-upper_limit = balance
-lower_limit = 0
-def find_min_payment(self):
-    pass
+
+def find_min_payment(balance, annualInterestRate):
+    """
+    :param balance: starting balance
+    :param annualInterestRate: annual interest rate in decimal
+    :return: decimal, minimum monthly payment to clear balance in 12 months
+    """
 
 
-print("Lowest Payment: " + str(minPayment))
+    def one_years_payment_simplified(balance, annualInterestRate, monthly_payment):
+        """
+        :param balance: starting balance
+        :param annualInterestRate: dec annual interst
+        :param monthly_payment: monthly payment amount
+        :return: final balance after one years payment
+        """
+        temp_balance = balance
+        for month in range(1, 12+1):
+
+            # take payment away from balance
+            temp_balance -= monthly_payment
+
+            # calculate interest payment
+            interest = temp_balance * (annualInterestRate / 12)
+
+            # add interest to balance
+            temp_balance = temp_balance + round(interest, 2)
+        return round(temp_balance, 2)
+
+
+    final_balance = balance
+
+    min_payment = 259
+
+    upper_limit = final_balance
+    lower_limit = final_balance / 12.0
+
+    epsilon = 0.01
+
+    while final_balance != epsilon: # if final balanace = 0 then returns min payment
+
+
+        if final_balance > epsilon: # if final balance is greater than 0, resets lower limit
+            lower_limit = min_payment
+
+        elif final_balance < epsilon :
+            upper_limit = min_payment
+
+        min_payment = (lower_limit + upper_limit) / 2.0
+
+        final_balance = one_years_payment_simplified(
+            balance,
+            annualInterestRate,
+            monthly_payment=min_payment
+        )
+
+
+    print("Lowest Payment: " + str(round(min_payment, 2)))
+    # return round(min_payment, 2)
+
+find_min_payment(balance, annualInterestRate)
+
 
 # define test
 class TestBisectionSearch(TestCase):
 
-    def test_balanace_320000
+    def test_balanace_320000_rate_0_2(self):
+        balance = 320000
+        annualInterestRate = 0.2
+
+        response = find_min_payment(balance, annualInterestRate)
+
+        self.assertEqual(29157.09, response)
+
+    def test_balanace_999999_rate_0_18(self):
+        balance = 999999
+        annualInterestRate = 0.18
+
+        response = find_min_payment(balance, annualInterestRate)
+
+        self.assertEqual(90325.03, response)
